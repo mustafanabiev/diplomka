@@ -4,6 +4,7 @@ class PlantModel {
   final String name;
   final String description;
   final bool isFavorites;
+  final String text;
 
   const PlantModel({
     required this.id, // Добавьте уникальный идентификатор
@@ -11,6 +12,7 @@ class PlantModel {
     required this.name,
     required this.description,
     required this.isFavorites,
+    required this.text,
   });
 
   PlantModel copyWith({
@@ -19,6 +21,7 @@ class PlantModel {
     String? name,
     String? description,
     bool? isFavorites,
+    String? text,
   }) {
     return PlantModel(
       id: id ?? this.id,
@@ -26,6 +29,7 @@ class PlantModel {
       name: name ?? this.name,
       description: description ?? this.description,
       isFavorites: isFavorites ?? this.isFavorites,
+      text: text ?? this.text,
     );
   }
 
